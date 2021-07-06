@@ -1,4 +1,4 @@
-import 'jobCardsScreen.dart';
+import 'screens/jobCardsScreen.dart';
 import 'package:flutter/material.dart';
 import 'data/job_data.dart';
 

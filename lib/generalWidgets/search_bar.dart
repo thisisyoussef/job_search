@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class UserInputField extends StatefulWidget {
-  const UserInputField({
+class SearchBar extends StatefulWidget {
+  const SearchBar({
     Key key,
     this.callback,
   }) : super(key: key);
   final Function callback;
   @override
-  _UserInputFieldState createState() => _UserInputFieldState();
+  _SearchBarState createState() => _SearchBarState();
 }
 
-class _UserInputFieldState extends State<UserInputField> {
+class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Column(

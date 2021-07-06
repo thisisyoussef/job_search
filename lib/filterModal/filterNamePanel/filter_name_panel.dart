@@ -56,7 +56,7 @@ class FilterNamePanel extends StatelessWidget {
                           ? Provider.of<JobFilters>(context)
                               .getCategories("Selected")
                               .toString()
-                          : filter == "Job Type"
+                          : filter == "Job Types"
                               ? Provider.of<JobFilters>(context)
                                   .getJobTypes("Selected")
                                   .toString()

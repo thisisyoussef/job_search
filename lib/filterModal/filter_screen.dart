@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:job_search/wide_rounded_button.dart';
+import 'file:///C:/Users/youss/AndroidStudioProjects/job_search/lib/generalWidgets/wide_rounded_button.dart';
 import 'package:provider/provider.dart';
 import 'filterNamePanel/filter_name_panel.dart';
 import 'filter_title_bar.dart';

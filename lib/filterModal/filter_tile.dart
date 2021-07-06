@@ -44,7 +44,6 @@ class FilterTile extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Container(
                           height: 20,
-                          //changed width from 14 to 25, changed rounded edges radius
                           child: Checkbox(
                             autofocus: true,
                             focusColor: Colors.black,
@@ -61,26 +60,5 @@ class FilterTile extends StatelessWidget {
             ),
           )
         : Container();
-
-    return ListTile(
-        onLongPress: removeTaskCallback,
-        title: Text(
-          taskTitle,
-          style: TextStyle(
-            fontFamily: 'Montserrat',
-            fontSize: 18,
-            color: const Color(0xff2e2e2e),
-          ),
-          textAlign: TextAlign.left,
-        ),
-        trailing: Checkbox(
-          autofocus: true,
-          focusColor: Colors.black,
-          hoverColor: Colors.black,
-          activeColor: Color(0xFF2B8116),
-          value: isChecked,
-          checkColor: Colors.white,
-          onChanged: checkboxCallback,
-        ));
   }
 }

@@ -1,14 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:job_search/list_card.dart';
-import 'models/job.dart';
-import 'venue_page_header.dart';
-import 'venue_info.dart';
-import 'header_text.dart';
+import '../jobCard/job_card.dart';
+import '../models/job.dart';
 
 class JobDetailsPage extends StatefulWidget {
-  static String id = "venue_page";
   final Job job;
   const JobDetailsPage({Key key, this.job}) : super(key: key);
 
@@ -40,7 +36,7 @@ class _JobDetailsPageState extends State<JobDetailsPage> {
               pinned: true,
               floating: true,
               flexibleSpace: FlexibleSpaceBar(
-                background: ListCard(
+                background: JobCard(
                   job: widget.job,
                 ),
               ),

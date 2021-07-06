@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:job_search/data/job_filters.dart';
 import 'package:job_search/filterModal/filter_screen.dart';
-import 'package:job_search/user_input_field.dart';
+import 'file:///C:/Users/youss/AndroidStudioProjects/job_search/lib/generalWidgets/search_bar.dart';
 import 'package:provider/provider.dart';
-import 'list_card.dart';
-import 'data/job_data.dart';
-import 'models/job.dart';
+import '../jobCard/job_card.dart';
+import '../data/job_data.dart';
+import '../models/job.dart';
 
 class JobCardsScreen extends StatefulWidget {
   final List<Job> jobData;
@@ -46,7 +46,7 @@ class _JobCardsScreenState extends State<JobCardsScreen> {
                   children: [
                     Padding(
                         padding: const EdgeInsets.only(left: 24.0),
-                        child: UserInputField(
+                        child: SearchBar(
                           callback: (String newKey) {
                             setState(() {
                               searchKey = newKey;
@@ -113,7 +113,7 @@ class _JobCardsScreenState extends State<JobCardsScreen> {
                                     .getJobTypes("Applied")
                                     .isEmpty) &&
                             jobTitle.contains(searchKey))
-                        ? ListCard(job: selectedJob)
+                        ? JobCard(job: selectedJob)
                         : Container();
                   },
                 ),

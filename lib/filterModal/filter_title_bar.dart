@@ -16,7 +16,6 @@ class FilterTitleBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String sport = "Football";
     return Container(
       decoration: BoxDecoration(
         border: Border(
@@ -92,7 +91,6 @@ class FilterTitleBar extends StatelessWidget {
                           ),
                   ),
                   onTap: () {
-                    print("Tapped");
                     saveCallBack();
                   }),
             ),

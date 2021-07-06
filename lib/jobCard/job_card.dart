@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:job_search/detail_tile.dart';
-import 'models/job.dart';
-import 'job_details_page.dart';
+import 'detail_tile.dart';
+import 'package:job_search/models/job.dart';
+import 'package:job_search/screens/job_details_page.dart';
 
-class ListCard extends StatelessWidget {
+class JobCard extends StatelessWidget {
   final Job job;
-  ListCard({Key key, this.job}) : super(key: key);
+  JobCard({Key key, this.job}) : super(key: key);
 
   TextStyle subTitleStyle = TextStyle(
     fontFamily: 'Chakra Petch',
