@@ -22,12 +22,14 @@ class _JobCardsScreenState extends State<JobCardsScreen> {
   @override
   Widget build(BuildContext context) {
     JobData().getJobData();
-    List<Job> selectedList;
+    List<Job> selectedList = [];
     sortKey == "Earliest"
         ? selectedList = jobListEarliest
         : sortKey == "Latest"
             ? selectedList = jobListLatest
-            : sortKey = "";
+            : sortKey == ""
+                ? selectedList = jobList
+                : null;
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -52,7 +54,7 @@ class _JobCardsScreenState extends State<JobCardsScreen> {
                           },
                         )),
                     Padding(
-                      padding: const EdgeInsets.only(right: 24.0),
+                      padding: const EdgeInsets.only(right: 20.0, top: 20),
                       child: InkWell(
                           child: Icon(
                             Icons.filter_list,

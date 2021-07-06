@@ -32,7 +32,9 @@ class ListCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => JobDetailsPage(),
+              builder: (context) => JobDetailsPage(
+                job: job,
+              ),
             ),
           );
         },

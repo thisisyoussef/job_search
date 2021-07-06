@@ -58,7 +58,9 @@ class JobData {
       jobListEarliest = List.from(jobList);
       jobListEarliest.sort(
           (a, b) => a.publicationDateTime.compareTo(b.publicationDateTime));
-      jobListLatest = List.from(jobListEarliest).reversed;
+      jobListLatest = List.from(jobListEarliest);
+      jobListLatest.sort(
+          (a, b) => b.publicationDateTime.compareTo(a.publicationDateTime));
 
       AppInformation.categories = jobCategories;
       AppInformation.jobTypes = jobTypes;
